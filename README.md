@@ -13,12 +13,19 @@ Link to hosted website test: https://plant-shop-matheusbviana.vercel.app
 <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width=50 height="50" margin: 20px></a>
 &nbsp &nbsp &nbsp &nbsp  &nbsp 
 <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width=50></a>
+&nbsp &nbsp &nbsp &nbsp  &nbsp 	
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Javascript_badge.svg" width=50></a>
+&nbsp &nbsp &nbsp &nbsp  &nbsp
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width=50 height="50" ></a>
 &nbsp &nbsp &nbsp &nbsp  &nbsp
 <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width=50 ></a>
 &nbsp &nbsp &nbsp &nbsp  &nbsp
 <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width=50></a>
+&nbsp &nbsp &nbsp &nbsp  &nbsp
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" width=50></a>
+	
 </div>
- &nbsp  &nbspFigma &nbsp &nbsp &nbsp &nbsp &nbspHTML &nbsp &nbsp &nbsp &nbsp &nbspNode.js &nbsp &nbsp &nbsp &nbsp &nbsp React
+ &nbsp  &nbspFigma &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp &nbspHTML &nbsp &nbsp &nbsp&nbsp  &nbsp &nbspJavascript  &nbsp &nbsp&nbsp &nbsp &nbsp &nbspCSS &nbsp &nbsp &nbsp &nbsp&nbsp  &nbsp &nbspNode.js &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp React &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspnpm
 
 ## Requirements
 - The system must have two types of users:
