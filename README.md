@@ -1,180 +1,182 @@
-# Projeto de Web - Loja de Plantas
+# Web Project - Plant Store
 
 - Luísa Balleroni Shimabucoro - 11832385
 - Matheus Bermudes Viana - 11849797
 - Wictor Dalbosco Silva - 11871027
 
-Link para teste do website hospedado: https://plant-shop-matheusbviana.vercel.app
+Link to hosted website test: https://plant-shop-matheusbviana.vercel.app
 
-## Requerimentos
-- O sistema deve ter dois tipos de usuário:
-  - *Administradores*: São responsáveis por gerenciar administradores, clientes e podutos. Para utilizar a conta de administrador, utilize as credenciais admin@admin.com:admin123 no formato (email:senha)
-  - *Clientes*: São usuários que acessam o sistema para comprar produtos
+## Requirements
+- The system must have two types of users:
+  - *Administrators*: They are responsible for managing administrators, clients, and products. To use the administrator account, use the credentials admin@admin.com:admin123 in the format (email:password)
+  - *Clients*: They are users who access the system to buy products.
 
-- Para armazenar os dados é preciso ter os seguintes registros:
-  - *admin*: id, nome, telefone e email
-  - *cliente*: id, nome, endereço, telefone e email
-  - *produto*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
+- To store the data, it is necessary to have the following records:
+  - *admin*: id, name, phone, and email
+  - *client*: id, name, address, phone, and email
+  - *product*:  id, name, photo, description, price, quantity in stock, and quantity sold.
 
-- Venda de produtos (ou serviços): produtos são selecionados, suas quantidades definidas e por fim são colocados no carrinho. Produtos são comprados usando um número de cartão de crédito (qualquer número é aceito pelo sistema). A quantidade do produto vendida é subtraída da quantidade do estoque e acrescida a quantidade de produtos vendidos. Carrinhos são esvaziados apenas após o pagamento ou por uma ação direta do usuário.
+- Selling products (or services): products are selected, their quantities defined, and finally added to the cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of the product sold is subtracted from the quantity in stock and added to the quantity of products sold. Carts are emptied only after payment or by a direct action of the user.
 
-- Gerenciamento de produtos/serviços: administradores podem criar/atualizar/ler/deletar (CRUD) novos produtos e serviços. Por exemplo, eles podem alterar a quantidade de produtos no estoque.
+- Management of products/services: administrators can create/update/read/delete (CRUD) new products and services. For example, they can change the quantity of products in stock.
 
-- **Funcionalidade específica:** o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e tempo disponível para manutenção. Com isso, a aplicação oferece sugestões de plantas que cumprem pelo menos 3 dos 4 critérios.
+- **Specific functionality:** the client can select the type of residence (house or apartment) and characteristics such as room lighting, temperature, and available time for maintenance. With this, the application offers suggestions for plants that meet at least 3 of the 4 criteria.
 
-- O sistema deve atender os requisitos de acessibilidade e prover boa usabilidade. Além disso, o sistema deve ser responsivo.
+- The system must meet accessibility requirements and provide good usability. Additionally, the system should be responsive.
 
 
-## Descrição do Projeto
-Esse projeto consiste no desenvolvimento de uma aplicação online para uma loja de plantas, a qual terá as seguintes funcionalidades:
-- Cadastro e Login
-- Adicionar ou remover produtos do carrinho
-- Processo de finalizar compra (checkout)
-- Filtros de busca de produtos
-- Opções para gerenciamento de clientes e produtos exclusivas para administradores do sistema
-- **Funcionalidade específica:** o cliente pode selecionar o tipo de residência (casa ou apartamento) e características como iluminação do cômodo, temperatura e tempo disponível para manutenção. Com isso, a aplicação oferece sugestões de plantas que cumprem pelo menos 3 dos 4 critérios
+## Project Description
+This project consists of developing an online application for a plant shop, which will have the following functionalities:
 
-Para que essas funcionalidades possuam um funcionamento adequado será necessário armazenar as seguintes informações:
-  - *admin*: id, nome, telefone e email
-  - *cliente*: id, nome, endereço, telefone e email
-  - *produto geral*: id, nome, foto, descrição, preço, quantidade em estoque e quantidade vendida
-    - *planta*: além dos atributos padrões, elas possuem tamanho, nível de iluminação, temperatura, manutenção ideais e categoria
+- Signup and Login
+- Add or remove products from the cart
+- Checkout process
+- Product search filters
+Options for customer and product management exclusive to system administrators
+- **Specific functionality:** the customer can select the type of residence (house or apartment) and characteristics such as room lighting, temperature, and available maintenance time. With this, the application offers suggestions for plants that meet at least 3 out of 4 criteria.
 
-### Diagrama de Navegação
+In order for these functionalities to work properly, it will be necessary to store the following information:
+  - *admin*: id, name, phone, and email
+  - *client*: id, name, address, phone, and email
+  - *general product:* id, name, photo, description, price, stock quantity, and sold quantity
+    - *plant*:  in addition to the standard attributes, they have size, ideal lighting level, temperature, ideal maintenance, and category.
+
+### Navigation Diagram
 <img src="Mockups/diagrama_navegacao.png" alt="navigation diagram" width="700"/>
 
 <a href="https://www.figma.com/file/3dgTdFB6VzP9HX0n41i1g5/Plant-Shop-Website-(Practice-%23001)-(Community)-(Copy)?node-id=0%3A1">Projeto no Figma</a>
-## Comentários Sobre o Código
-## Plano de Testagem
 
-Serão executados testes manuais para login e cadastro, inserções e gerenciamento de produtos, usuários e administradores, filtragem, busca e também simulação de compras em vários cenários.
+## Comments on the Code
+## Testing Plan
 
-Não serão utilizados frameworks adicionais para os testes.
+Manual tests will be executed for login and registration, product management, user and administrator management, filtering, search, and also simulation of purchases in various scenarios.
 
-Para criação de usuários admin, lembre-se de utilizar admin@admin.com:admin no formato (email:senha).
+No additional frameworks will be used for testing.
 
-### Seguindo um roteiro de testagem
+To create admin users, remember to use admin@admin.com:admin in the format (email:password).
 
-1. **Teste com cadastro**
-	* Cadastro feito com e-mail inválido
- 	* Cadastro em que o campo de senha não confere com o campo de confirmação da senha
- 	* Cadastro em que a senha possua menos de 8 caracteres
- 	* Cadastro preenchido corretamente com dados válidos
- 	* Cadastro utilizando o mesmo email que o de um cadastro previamente realizado
-2. **Teste com login**
-    * Login feito com campos vazios
-    * Login feito com campos inválidos (email sem “@”, senha com menos que 8 caracteres etc)
-    * Login feito com campos corretamente preenchidos
-    * Logout
+### Following a Testing Script
 
-3. **Teste com busca**
-	* Busca no campo de busca do produto "computador"
-	* Busca no campo de busca do produto "planta de interior"
-	* Busca no campo de busca por "planta"
+1. **Signup Test**
+	* Signup with an invalid email
+	* Signup with the password field not matching the password confirmation field
+	* Signup with a password less than 8 characters
+	* Signup filled correctly with valid data
+	* Signup using the same email as a previously registered account
 
-4. **Teste com funcionalidade específica de busca personalizada**
-	* Realizar busca com menos que 4 campos preenchidos
-	* Realizar busca preenchendo, respectivamente, os campos "Médio", "Médio", "Média" e "Pouco"
+2. **Login Test**
+	* Login with empty fields
+	* Login with invalid fields (email without "@", password less than 8 characters, etc.)
+	* Login with correctly filled fields
+	* Logout
 
-5. **Teste de navegação**
-	* Navegação pelas páginas do cliente (Home, Loja, Busca Personalizada, Sobre, Carrinho e Meus Pedidos)
-	* Navegação com admin (páginas do cliente + Clientes, Produtos, Compras, Editar Cliente, Editar Produto)
- 
-6. **Teste com escolha de produto**
-	* Ir na sessão de loja, filtrar por produtos mais caros primeiro, clicar no produto, alterar a sua quantidade e adicionar ao carrinho
+3. **Search Test**
+	* Search in the product search field "computer"
+	* Search in the product search field "indoor plant"
+	* Search in the search field for "plant"
 
-7. **Teste carrinho e check out**
-	* Compra com carrinho vazio
-	* Editar quantidade de um determinado produto dentro do carrinho
-	* Remover um produto do carrinho
+4. **Test with specific personalized search functionality**
+	* Perform a search with less than 4 filled fields
+	* Perform a search by filling in, respectively, the fields "Medium," "Medium," "Average," and "Little"
 
-8. **Teste editar produto**
-	* Alterar informações do produto que precisam ser mudadas e buscar pelo produto na barra de navegação.
+5. **Navigation Test**
+	* Navigation through the client's pages (Home, Shop, Personalized Search, About, Cart, and My Orders)
+	* Navigation with admin (client pages + Customers, Products, Purchases, Edit Customer, Edit Product)
 
-9. **Teste inserir produto**
-	* Inserir produto com campos vazios
-	* Inserir produto com campos inválidos (ex: preço : "vinte"; url inválida)
+6. **Product Selection Test**
+	* Go to the shop section, filter by most expensive products first, click on the product, change its quantity, and add it to the cart
 
-10. **Teste remover produto**
-	* Removendo um produto.
+7. **Cart and Checkout Test**
+	* Purchase with an empty cart
+	* Edit the quantity of a specific product within the cart
+	* Remove a product from the cart
 
-11. **Teste remover cliente**
-	* Removendo um cliente.
+8. **Edit Product Test**
+	* Change information of the product that needs to be changed and search for the product in the navigation bar.
 
-12. **Teste visualizar pedidos (admin)**
-	* Visualizando quais pedidos foram feitos.
-		
-13. **Teste visualizar compras (cliente)**
-	* Cliente visualizando as compras feitas
+9. **Insert Product Test**
+	* Insert product with empty fields
+	* Insert product with invalid fields (ex: price: "twenty"; invalid URL)
 
-14. **Teste visualizar produtos (admin)**
-	* Administrador visualizando os produtos
+10. **Remove Product Test**
+	* Removing a product.
+
+11. **Remove Customer Test**
+	* Removing a customer.
+
+12. **View Orders Test (Admin)**
+	* Viewing which orders were made.
+
+13. **View Purchases Test (Client)**
+	* Client viewing their purchases
+
+14. **View Products Test (Admin)**
+	* Administrator viewing the products
+
+## Test Results
+
+### Expected Results According to Testing Plan
+
+1. **Registration test**
+	* Alert message for invalid email and warning message for registration form text field
+	* Alert message for non-matching passwords
+	* Alert message for password length requirement (minimum 8 characters)
+	* Successful registration and login, providing access to the shopping cart, "My Orders" tab, and logout button if the customer wishes to exit their newly created account
+	* Alert message for already registered email
+2. **Login test**
+	* Alert message for incorrect email or password
+	* Alert message for incorrect email or password and warning message for login form text field
+	* Successful login, providing access to the shopping cart, "My Orders" tab, and logout button if the customer wishes to exit their newly created account
+	* Logout successful, causing the shopping cart and "My Orders" tabs to disappear
+3. **Search test**
+	* Nothing is returned in the store session, as the product does not exist in the store's catalog
+	* Indoor plants present in the store's catalog are returned
+	* All products in the "Plant" category are returned
+4. **Test with specific custom search functionality**
+	* Alert message asking the customer to fill in all fields
+	* Plants with these characteristics are returned
+5. **Navigation test**
+	* All pages should be accessible and functional
+	* All pages should be accessible and functional
+6. **Product selection test**
+	* The most expensive products in the store should appear (equipment), then when clicked their data appears on the product page and their quantity can be changed between the values [1, current stock] and when the add to cart button is clicked the product is placed on the customer's cart page
+7. **Cart and checkout test**
+	* Alert message for the customer that they have no items in their cart
+	* Quantity must be able to be changed between the values [1, current stock]
+	* Product is successfully removed from the cart
+8. **Edit product test**
+	* The edited product should be found when searching for the updated characteristics
+9. **Insert product test**
+	* Alert message for the admin that all product data fields must be filled out
+	* Alert message for the admin that the image link is invalid
+10. **Remove product test**
+	* Alert message notifying that the product has been removed, and the product should no longer be found in the store
+11. **Remove customer test**
+	* The customer is removed, and it is no longer possible to log into their account
+12. **View orders test (admin)**
+	* If there are any purchases, they will be displayed in a list, showing the buyer, product, and price.
+13. **View purchases test (customer)**
+	* Purchases will be displayed in a list, with purchase information and the last 4 digits of the card used.
+14. **View products test (admin)**
+	* All existing products in the store should be displayed, with the ability for the admin to edit them.
 
 
-## Resultado dos Testes
-
-### Resultados esperados de acordo com o roteiro de testagem
-
-1. **Teste com cadastro**
-	* Alert avisando que o email é inválido e aviso do campo de texto do forms de cadastro
-	* Alert avisando que as senhas não batem
-	* Alert avisando que a senha deve possuir pelo menos 8 caracteres
-	* Cadastro e login realizado com sucesso, dando acesso ao carrinho, aba de "Meus Pedidos" e botão de logout caso o cliente deseje sair de sua conta recém criada
-	* Alert avisando que o email já foi cadastrado
-2. **Teste com login**
-	*  Alert de email ou senha incorretos
-	*  Alert de email ou senha incorretos e aviso do campo de texto do forms de login
-	*  Login realizado com sucesso, dando acesso ao carrinho, aba de "Meus Pedidos" e botão de logout caso o cliente deseje sair de sua conta recém criada
-	*  Logout é realizado, fazendo com que abas de carrinho e "Meus Pedidos" sumam
-3. **Teste com busca**
-	* Nada é retornado na sessão de loja, uma vez que o produto não existe no catálogo da loja
-	* As plantas de interior presentes no catálogo da loja são retornadas
-	* Todos os produtos da categoria "Planta" são retornados
-4. **Teste com funcionalidade específica de busca personalizada**
-	* Alert pedindo para que o cliente preencha todos os campos
-	* As plantas que possuem essas características são retornadas
-5. **Teste de navegação**
-	* Todas as páginas devem ser acessíveis e funcionais
-	* Todas as páginas devem ser acessíveis e funcionais
-6. **Teste com escolha de produto**
-	* Os produtos mais caros da loja devem aparecer (equipamento), então quando clicados seus dados aparecem na página de produto e sua quantidade pode ser alterada entre os valores [1, estoque atual] e quando quando o botão de adicionar ao carrinho é clicado o produto é colocado na página de carrinho do cliente
-7. **Teste carrinho e check out**
-	* Alert avisando o cliente que ele não possui itens no carrinho
-	* A quantidade deve poder ser alterada entre os valores [1, estoque atual]
-	* Produto é removido do carrinho com sucesso
-8. **Teste editar produto**
-	* O produto editado deve ser encontrado ao buscar pelas novas características atualizadas
-9. **Teste inserir produto**
-	* Alert avisando o admin que todos os campos de dados do produto devem ser preenchidos
-	* Alert avisando o admin que o link da imagem é inválido
-10. **Teste remover produto**
-	* Alert avisando que o produto foi removido, e o produto não deve ser mais encontrado na loja
-11. **Teste remover cliente**
-	* O cliente é removido, não sendo mais possível logar na conta dele
-12. **Teste visualizar pedidos (admin)**
-	* Caso existam compras, elas serão exibidas em uma lista, exibindo o comprador, o produto e o preço.
-13. **Teste visualizar compras (cliente)**
-	* As compras serão exibidas em lista, com informações da compra e os últimos 4 dígitos do cartão utilizado.
-14. **Teste visualizar produtos (admin)**
-	* Devem ser exibidos todos os produtos existentes na loja, com a possibilidade de edição por parte do admin.
-
-## Procedimentos de Construção
+## Build Instructions
 
 Para poder testar o site é necessário ter o [Node](https://nodejs.org/en/download/) e seu gerenciador de pacotes [npm](https://nodejs.org/en/download/) instalados.
 
-Depois de instalados, serão necessários os arquivos localizados no diretório Milestone3, e rodar os seguintes comandos:
+Once installed, the files located in the Milestone3 directory are needed, and the following commands should be run:
 
+Important: The Windows display configuration must be set to 100%, as well as your browser's zoom :)
+**The folder is "EntregaFinal", you can disregard the others
 
-Importante: A configuração de exibição do Windows deve estar em 100%, assim como o zoom do seu navegador :)
-** A pasta é a "EntregaFinal", podem desconsiderar as outras
-
-Dentro da pasta backend:
+Within the backend folder:
 
 ```
 npm install
 npm run server
 ```
-Com o servidor rodando, rode dentro da pasta frontend:
+With the server running, run within the frontend folder:
 
 ```
 npm install
@@ -182,14 +184,14 @@ npm start
 ```
 
 
-Deve ser aberta uma aba no seu browser, caso não abra, basta acessar 'http://localhost:3000/'
+A tab should open in your browser, if it does not, just access 'http://localhost:3000/'
 
 
-## Problemas
-Após a realização de diversos testes, não conseguimos detectar nenhum problema no funcionamento do site, inicialmente tivemos dificuldades para conectar com a base de dados MongoDB mas após assistir o tutorial com calma conseguimos integrar normalmente.
+## Issues
+After several tests, we were unable to detect any problems with the website's functionality. Initially, we had difficulty connecting to the MongoDB database, but after watching the tutorial carefully, we were able to integrate it normally.
 
 
-## Comentários
-O projeto ajudou muito na consolidação de conhecimentos em WEB, especialmente na utilização de React e Node.js, foi extremamente produtivo e didático, com certeza irá nos ajudar futuramente quando formos lidar com desenvolvimento web novamente.
+## Comments
+The project helped a lot in consolidating our knowledge in WEB, especially in the use of React and Node.js. It was extremely productive and didactic, and it will certainly help us in the future when we deal with web development again.
 
 
