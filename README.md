@@ -6,6 +6,20 @@
 
 Link to hosted website test: https://plant-shop-matheusbviana.vercel.app
 
+## Tools and languages used for this project
+
+<div style="display: flex">
+&nbsp
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width=50 height="50" margin: 20px></a>
+&nbsp &nbsp &nbsp &nbsp  &nbsp 
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width=50></a>
+&nbsp &nbsp &nbsp &nbsp  &nbsp
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width=50 ></a>
+&nbsp &nbsp &nbsp &nbsp  &nbsp
+<a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width=50></a>
+</div>
+ &nbsp  &nbspFigma &nbsp &nbsp &nbsp &nbsp &nbspHTML &nbsp &nbsp &nbsp &nbsp &nbspNode.js &nbsp &nbsp &nbsp &nbsp &nbsp React
+
 ## Requirements
 - The system must have two types of users:
   - *Administrators*: They are responsible for managing administrators, clients, and products. To use the administrator account, use the credentials admin@admin.com:admin123 in the format (email:password)
